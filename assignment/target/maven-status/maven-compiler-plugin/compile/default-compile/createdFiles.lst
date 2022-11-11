@@ -2,12 +2,14 @@ mathworks/technical/assignment/model/Parameters.class
 mathworks/technical/assignment/utils/SentimentHelper.class
 mathworks/technical/assignment/model/Response.class
 mathworks/technical/assignment/model/Cases.class
-mathworks/technical/assignment/model/Sentiment.class
 mathworks/technical/assignment/helpers/Covid19Helper.class
 mathworks/technical/assignment/model/StatisticsObject.class
 mathworks/technical/assignment/helpers/SentimentHelper.class
 mathworks/technical/assignment/helpers/Covid19Helper$1.class
+mathworks/technical/assignment/model/SentimentPrediction.class
+mathworks/technical/assignment/model/Prediction.class
 mathworks/technical/assignment/constants/EndPoints.class
+mathworks/technical/assignment/helpers/SentimentHelper$1.class
 mathworks/technical/assignment/utils/ConfigManager.class
 mathworks/technical/assignment/model/SentimentObject.class
 mathworks/technical/assignment/model/Tests.class

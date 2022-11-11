@@ -1,0 +1,70 @@
+package mathworks.technical.assignment.helpers;
+
+import java.util.ArrayList;
+import java.util.List;
+import org.apache.http.HttpStatus;
+import org.junit.Assert;
+
+import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
+import io.restassured.response.Response;
+import mathworks.technical.assignment.constants.EndPoints;
+import mathworks.technical.assignment.model.SentimentObject;
+import mathworks.technical.assignment.utils.ConfigManager;
+
+/*
+This class will help in fetching data from EndPoints.
+This class returns response of given sentiments.
+Response will contain
+[
+  {
+    "id": "1",
+    "predictions": [
+      {
+        "prediction": "positive",
+        "probability": 0.84675
+      }
+    ]
+  }
+]
+ which contains all all current statistics
+This class is for test scenario 1 for covid 19 fetch statistics
+along with API methods like GET, POST, DELETE, PUT
+*/
+public class SentimentHelper {
+	private static final String BASE_URL_T2  = ConfigManager.getInstance().getString("base_url_t2");
+	private static final String API_KEY_NAME  = ConfigManager.getInstance().getString("t1_api_key_name");
+	private static final String API_KEY_VALUE  = ConfigManager.getInstance().getString("t1_api_key");
+	private static final String API_HOST_NAME  = ConfigManager.getInstance().getString("t1_api_host_name");
+	private static final String API_HOST_VALUE = ConfigManager.getInstance().getString("t2_api_host_value");
+	
+	public SentimentHelper() {
+		RestAssured.baseURI = BASE_URL_T2;
+	}
+	
+	public Response getSentiments(int id, String language, String text){
+		
+		SentimentObject sentiment = new SentimentObject();
+		sentiment.setId(String.valueOf(id));
+		sentiment.setLanguage(language);
+		sentiment.setText(text);
+		
+		List<SentimentObject> sentiment_list= new ArrayList<>();
+		sentiment_list.add(sentiment);  
+		
+		Response response = RestAssured.given()
+				.contentType(ContentType.JSON)
+				.when()
+				.headers(API_KEY_NAME,API_KEY_VALUE)
+				.headers(API_HOST_NAME,API_HOST_VALUE)
+				.body(sentiment_list)
+				.post(EndPoints.GET_SENTIMENTS)
+				.andReturn();
+		
+		Assert.assertEquals(response.getStatusCode(),HttpStatus.SC_OK);
+		
+		return response;
+	}
+	
+
+}

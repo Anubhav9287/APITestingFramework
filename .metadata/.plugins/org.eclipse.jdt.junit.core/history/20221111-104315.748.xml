@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Test_Scenario2" project="assignment" tests="5" started="5" failures="0" errors="0" ignored="0">
+  <testsuite name="mathworks.technical.assignment.tests.Test_Scenario2" time="4.475">
+    <testcase name="testPostSentiment[0: 1, en, I am a programmer]" classname="mathworks.technical.assignment.tests.Test_Scenario2" time="1.385"/>
+    <testcase name="testPostSentiment[1: 2, en, Hello I love the service]" classname="mathworks.technical.assignment.tests.Test_Scenario2" time="0.904"/>
+    <testcase name="testPostSentiment[2: 3, en, failure is not fatal]" classname="mathworks.technical.assignment.tests.Test_Scenario2" time="0.737"/>
+    <testcase name="testPostSentiment[3: 4, en, Lead from the heart, not the head]" classname="mathworks.technical.assignment.tests.Test_Scenario2" time="0.772"/>
+    <testcase name="testPostSentiment[4: 5, en, You cannot protect yourself from sadness without protecting yourself from happiness]" classname="mathworks.technical.assignment.tests.Test_Scenario2" time="0.675"/>
+  </testsuite>
+</testrun>

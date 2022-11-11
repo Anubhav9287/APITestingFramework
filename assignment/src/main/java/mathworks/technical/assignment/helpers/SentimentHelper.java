@@ -1,18 +1,32 @@
 package mathworks.technical.assignment.helpers;
 
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 import org.apache.http.HttpStatus;
 import org.junit.Assert;
+
+import com.fasterxml.jackson.core.type.TypeReference;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import mathworks.technical.assignment.constants.EndPoints;
 import mathworks.technical.assignment.model.SentimentObject;
+import mathworks.technical.assignment.model.SentimentPrediction;
 import mathworks.technical.assignment.utils.ConfigManager;
 
+/*
+This class will help in fetching data from EndPoints.
+This class returns response of given sentiments.
+Response will contain Id, prediction and probability
+It accepts: ID, language  [en, de, es, ar, ch, tk], text
+This class is for test scenario 1 for covid 19 fetch statistics
+along with API methods like GET, POST, DELETE, PUT
+*/
+
 public class SentimentHelper {
+	//fetch value from config file
 	private static final String BASE_URL_T2  = ConfigManager.getInstance().getString("base_url_t2");
 	private static final String API_KEY_NAME  = ConfigManager.getInstance().getString("t1_api_key_name");
 	private static final String API_KEY_VALUE  = ConfigManager.getInstance().getString("t1_api_key");
@@ -23,8 +37,9 @@ public class SentimentHelper {
 		RestAssured.baseURI = BASE_URL_T2;
 	}
 	
-	public Response getSentiments(int id, String language, String text){
+	public SentimentPrediction getSentiments(int id, String language, String text){
 		
+		//create a object to feed into post request
 		SentimentObject sentiment = new SentimentObject();
 		sentiment.setId(String.valueOf(id));
 		sentiment.setLanguage(language);
@@ -42,10 +57,11 @@ public class SentimentHelper {
 				.post(EndPoints.GET_SENTIMENTS)
 				.andReturn();
 		
+		//check the status. As given in document its 200 for sucess.
 		Assert.assertEquals(response.getStatusCode(),HttpStatus.SC_OK);
-		
-		return response;
+		Type type = new TypeReference<List<SentimentPrediction>>(){}.getType();
+		List<SentimentPrediction> sentimentPredict = response.as(type);
+		return sentimentPredict.get(0);
 	}
 	
-
 }

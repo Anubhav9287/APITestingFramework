@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Test_Scenario1 (1)" project="assignment" tests="7" started="7" failures="0" errors="0" ignored="0">
+  <testsuite name="mathworks.technical.assignment.tests.Test_Scenario2" time="5.956">
+    <testcase name="testPostSentiment[0: 1, en, I am a programmer]" classname="mathworks.technical.assignment.tests.Test_Scenario2" time="1.657"/>
+    <testcase name="testPostSentiment[1: 2, en, Hello I love the service]" classname="mathworks.technical.assignment.tests.Test_Scenario2" time="0.805"/>
+    <testcase name="testPostSentiment[2: 3, en, failure is not fatal]" classname="mathworks.technical.assignment.tests.Test_Scenario2" time="0.918"/>
+    <testcase name="testPostSentiment[3: 4, en, Lead from the heart, not the head]" classname="mathworks.technical.assignment.tests.Test_Scenario2" time="1.846"/>
+    <testcase name="testPostSentiment[4: 5, en, You cannot protect yourself from sadness without protecting yourself from happiness]" classname="mathworks.technical.assignment.tests.Test_Scenario2" time="0.728"/>
+  </testsuite>
+  <testsuite name="mathworks.technical.assignment.tests.Test_Scenario1" time="3.767">
+    <testcase name="testValidateStatisticsResult" classname="mathworks.technical.assignment.tests.Test_Scenario1" time="3.081"/>
+    <testcase name="testValidateStatisticsCountry" classname="mathworks.technical.assignment.tests.Test_Scenario1" time="0.686"/>
+  </testsuite>
+</testrun>

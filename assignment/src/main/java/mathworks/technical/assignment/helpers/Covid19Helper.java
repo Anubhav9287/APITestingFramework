@@ -14,7 +14,9 @@ import mathworks.technical.assignment.model.StatisticsObject;
 import mathworks.technical.assignment.utils.ConfigManager;
 
 /*
-	This class will help in fetching data from EndPoints
+	This class will help in fetching data from EndPoints.
+	This class returns statistics object which contains all all current statistics
+	This class is for test scenario 1 for covid 19 fetch statistics
 	along with API methods like GET, POST, DELETE, PUT
 */
 public class Covid19Helper {
@@ -45,7 +47,6 @@ public class Covid19Helper {
 		Type type = new TypeReference<StatisticsObject>(){}.getType();
 		//Assert the status code
 		Assert.assertEquals(response.getStatusCode(),HttpStatus.SC_OK);
-		
 		StatisticsObject statistics = response.as(type);
 //		System.out.print("-----------------------------------------");
 		

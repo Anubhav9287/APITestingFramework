@@ -1,8 +1,9 @@
+/Users/anubhav/eclipse-workspace/assignment/src/main/java/mathworks/technical/assignment/model/SentimentPrediction.java
 /Users/anubhav/eclipse-workspace/assignment/src/main/java/mathworks/technical/assignment/utils/ConfigManager.java
 /Users/anubhav/eclipse-workspace/assignment/src/main/java/mathworks/technical/assignment/helpers/Covid19Helper.java
 /Users/anubhav/eclipse-workspace/assignment/src/main/java/mathworks/technical/assignment/utils/SentimentHelper.java
 /Users/anubhav/eclipse-workspace/assignment/src/main/java/mathworks/technical/assignment/model/Cases.java
-/Users/anubhav/eclipse-workspace/assignment/src/main/java/mathworks/technical/assignment/model/Sentiment.java
+/Users/anubhav/eclipse-workspace/assignment/src/main/java/mathworks/technical/assignment/model/Prediction.java
 /Users/anubhav/eclipse-workspace/assignment/src/main/java/mathworks/technical/assignment/model/SentimentObject.java
 /Users/anubhav/eclipse-workspace/assignment/src/main/java/mathworks/technical/assignment/helpers/SentimentHelper.java
 /Users/anubhav/eclipse-workspace/assignment/src/main/java/mathworks/technical/assignment/constants/EndPoints.java

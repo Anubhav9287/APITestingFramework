@@ -1,6 +1,7 @@
 package mathworks.technical.assignment.tests;
 
-import static org.testng.Assert.assertNotNull;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -11,6 +12,7 @@ import com.tngtech.java.junit.dataprovider.DataProviderRunner;
 import com.tngtech.java.junit.dataprovider.UseDataProvider;
 
 import mathworks.technical.assignment.helpers.SentimentHelper;
+import mathworks.technical.assignment.model.SentimentPrediction;
 
 @RunWith(DataProviderRunner.class)
 public class Test_Scenario2 {
@@ -35,11 +37,19 @@ public class Test_Scenario2 {
 	
 	@Test
 	@UseDataProvider("sentimentAnalysis")
-	public void testPostSentiment(int id, String language, String text) {
+	public void testCheckIdExits(int id, String language, String text) {
+		SentimentPrediction predictions = sentimentHelper.getSentiments(id,language,text);
 		
-		String r_id = sentimentHelper.getSentiments(id,language,text).jsonPath().getString("id");
-//		System.out.println("ID: "+r_id);
+		String r_id = predictions.getId();
 		assertNotNull(r_id,"id is not null");
+	}
+	
+	@Test
+	@UseDataProvider("sentimentAnalysis")
+	public void testVerifyProbabilityGreaterThanHalf(int id, String language, String text) {
+		SentimentPrediction predictions = sentimentHelper.getSentiments(id,language,text);
+		Double probability = predictions.getPredictions().get(0).getProbability();
+		assertTrue(probability > 0.5);
 	}
 	
 }
