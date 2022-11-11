@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-11-11T00:23:28 CST" name="Default suite" finished-at="2022-11-11T00:23:35 CST" duration-ms="7332">
+    <groups>
+    </groups>
+    <test started-at="2022-11-11T00:23:28 CST" name="Default test" finished-at="2022-11-11T00:23:35 CST" duration-ms="7332">
+      <class name="mathworks.technical.assignment.tests.Test_Scenario1">
+        <test-method is-config="true" signature="init()[pri:0, instance:mathworks.technical.assignment.tests.Test_Scenario1@1fb19a0]" started-at="2022-11-11T00:23:28 CST" name="init" finished-at="2022-11-11T00:23:28 CST" duration-ms="148" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="testValidateStatisticsCountry()[pri:0, instance:mathworks.technical.assignment.tests.Test_Scenario1@1fb19a0]" started-at="2022-11-11T00:23:28 CST" name="testValidateStatisticsCountry" finished-at="2022-11-11T00:23:35 CST" duration-ms="6463" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidateStatisticsCountry -->
+        <test-method signature="testValidateStatisticsResult()[pri:0, instance:mathworks.technical.assignment.tests.Test_Scenario1@1fb19a0]" started-at="2022-11-11T00:23:35 CST" name="testValidateStatisticsResult" finished-at="2022-11-11T00:23:35 CST" duration-ms="683" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidateStatisticsResult -->
+      </class> <!-- mathworks.technical.assignment.tests.Test_Scenario1 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

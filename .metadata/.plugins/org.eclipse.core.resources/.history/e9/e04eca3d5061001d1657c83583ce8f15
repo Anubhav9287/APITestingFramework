@@ -1,0 +1,483 @@
+//-----------------------------------mathworks.technical.assignment.model.Cases.java-----------------------------------
+
+package mathworks.technical.assignment.model;
+
+import java.util.HashMap;
+import java.util.Map;
+import javax.annotation.Generated;
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({
+"new",
+"active",
+"critical",
+"recovered",
+"1M_pop",
+"total"
+})
+@Generated("jsonschema2pojo")
+public class Cases {
+
+@JsonProperty("new")
+private Object _new;
+@JsonProperty("active")
+private Integer active;
+@JsonProperty("critical")
+private Object critical;
+@JsonProperty("recovered")
+private Integer recovered;
+@JsonProperty("1M_pop")
+private String _1MPop;
+@JsonProperty("total")
+private Integer total;
+@JsonIgnore
+private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+
+@JsonProperty("new")
+public Object getNew() {
+return _new;
+}
+
+@JsonProperty("new")
+public void setNew(Object _new) {
+this._new = _new;
+}
+
+@JsonProperty("active")
+public Integer getActive() {
+return active;
+}
+
+@JsonProperty("active")
+public void setActive(Integer active) {
+this.active = active;
+}
+
+@JsonProperty("critical")
+public Object getCritical() {
+return critical;
+}
+
+@JsonProperty("critical")
+public void setCritical(Object critical) {
+this.critical = critical;
+}
+
+@JsonProperty("recovered")
+public Integer getRecovered() {
+return recovered;
+}
+
+@JsonProperty("recovered")
+public void setRecovered(Integer recovered) {
+this.recovered = recovered;
+}
+
+@JsonProperty("1M_pop")
+public String get1MPop() {
+return _1MPop;
+}
+
+@JsonProperty("1M_pop")
+public void set1MPop(String _1MPop) {
+this._1MPop = _1MPop;
+}
+
+@JsonProperty("total")
+public Integer getTotal() {
+return total;
+}
+
+@JsonProperty("total")
+public void setTotal(Integer total) {
+this.total = total;
+}
+
+@JsonAnyGetter
+public Map<String, Object> getAdditionalProperties() {
+return this.additionalProperties;
+}
+
+@JsonAnySetter
+public void setAdditionalProperty(String name, Object value) {
+this.additionalProperties.put(name, value);
+}
+
+}
+-----------------------------------mathworks.technical.assignment.model.Deaths.java-----------------------------------
+
+package mathworks.technical.assignment.model;
+
+import java.util.HashMap;
+import java.util.Map;
+import javax.annotation.Generated;
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({
+"new",
+"1M_pop",
+"total"
+})
+@Generated("jsonschema2pojo")
+public class Deaths {
+
+@JsonProperty("new")
+private Object _new;
+@JsonProperty("1M_pop")
+private String _1MPop;
+@JsonProperty("total")
+private Integer total;
+@JsonIgnore
+private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+
+@JsonProperty("new")
+public Object getNew() {
+return _new;
+}
+
+@JsonProperty("new")
+public void setNew(Object _new) {
+this._new = _new;
+}
+
+@JsonProperty("1M_pop")
+public String get1MPop() {
+return _1MPop;
+}
+
+@JsonProperty("1M_pop")
+public void set1MPop(String _1MPop) {
+this._1MPop = _1MPop;
+}
+
+@JsonProperty("total")
+public Integer getTotal() {
+return total;
+}
+
+@JsonProperty("total")
+public void setTotal(Integer total) {
+this.total = total;
+}
+
+@JsonAnyGetter
+public Map<String, Object> getAdditionalProperties() {
+return this.additionalProperties;
+}
+
+@JsonAnySetter
+public void setAdditionalProperty(String name, Object value) {
+this.additionalProperties.put(name, value);
+}
+
+}
+-----------------------------------mathworks.technical.assignment.model.Response.java-----------------------------------
+
+package mathworks.technical.assignment.model;
+
+import java.util.HashMap;
+import java.util.Map;
+import javax.annotation.Generated;
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({
+"continent",
+"country",
+"population",
+"cases",
+"deaths",
+"tests",
+"day",
+"time"
+})
+@Generated("jsonschema2pojo")
+public class Response {
+
+@JsonProperty("continent")
+private String continent;
+@JsonProperty("country")
+private String country;
+@JsonProperty("population")
+private Integer population;
+@JsonProperty("cases")
+private Cases cases;
+@JsonProperty("deaths")
+private Deaths deaths;
+@JsonProperty("tests")
+private Tests tests;
+@JsonProperty("day")
+private String day;
+@JsonProperty("time")
+private String time;
+@JsonIgnore
+private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+
+@JsonProperty("continent")
+public String getContinent() {
+return continent;
+}
+
+@JsonProperty("continent")
+public void setContinent(String continent) {
+this.continent = continent;
+}
+
+@JsonProperty("country")
+public String getCountry() {
+return country;
+}
+
+@JsonProperty("country")
+public void setCountry(String country) {
+this.country = country;
+}
+
+@JsonProperty("population")
+public Integer getPopulation() {
+return population;
+}
+
+@JsonProperty("population")
+public void setPopulation(Integer population) {
+this.population = population;
+}
+
+@JsonProperty("cases")
+public Cases getCases() {
+return cases;
+}
+
+@JsonProperty("cases")
+public void setCases(Cases cases) {
+this.cases = cases;
+}
+
+@JsonProperty("deaths")
+public Deaths getDeaths() {
+return deaths;
+}
+
+@JsonProperty("deaths")
+public void setDeaths(Deaths deaths) {
+this.deaths = deaths;
+}
+
+@JsonProperty("tests")
+public Tests getTests() {
+return tests;
+}
+
+@JsonProperty("tests")
+public void setTests(Tests tests) {
+this.tests = tests;
+}
+
+@JsonProperty("day")
+public String getDay() {
+return day;
+}
+
+@JsonProperty("day")
+public void setDay(String day) {
+this.day = day;
+}
+
+@JsonProperty("time")
+public String getTime() {
+return time;
+}
+
+@JsonProperty("time")
+public void setTime(String time) {
+this.time = time;
+}
+
+@JsonAnyGetter
+public Map<String, Object> getAdditionalProperties() {
+return this.additionalProperties;
+}
+
+@JsonAnySetter
+public void setAdditionalProperty(String name, Object value) {
+this.additionalProperties.put(name, value);
+}
+
+}
+-----------------------------------mathworks.technical.assignment.model.Statistics.java-----------------------------------
+
+package mathworks.technical.assignment.model;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import javax.annotation.Generated;
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({
+"get",
+"parameters",
+"errors",
+"results",
+"response"
+})
+@Generated("jsonschema2pojo")
+public class Statistics {
+
+@JsonProperty("get")
+private String get;
+@JsonProperty("parameters")
+private List<Object> parameters = null;
+@JsonProperty("errors")
+private List<Object> errors = null;
+@JsonProperty("results")
+private Integer results;
+@JsonProperty("response")
+private List<Response> response = null;
+@JsonIgnore
+private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+
+@JsonProperty("get")
+public String getGet() {
+return get;
+}
+
+@JsonProperty("get")
+public void setGet(String get) {
+this.get = get;
+}
+
+@JsonProperty("parameters")
+public List<Object> getParameters() {
+return parameters;
+}
+
+@JsonProperty("parameters")
+public void setParameters(List<Object> parameters) {
+this.parameters = parameters;
+}
+
+@JsonProperty("errors")
+public List<Object> getErrors() {
+return errors;
+}
+
+@JsonProperty("errors")
+public void setErrors(List<Object> errors) {
+this.errors = errors;
+}
+
+@JsonProperty("results")
+public Integer getResults() {
+return results;
+}
+
+@JsonProperty("results")
+public void setResults(Integer results) {
+this.results = results;
+}
+
+@JsonProperty("response")
+public List<Response> getResponse() {
+return response;
+}
+
+@JsonProperty("response")
+public void setResponse(List<Response> response) {
+this.response = response;
+}
+
+@JsonAnyGetter
+public Map<String, Object> getAdditionalProperties() {
+return this.additionalProperties;
+}
+
+@JsonAnySetter
+public void setAdditionalProperty(String name, Object value) {
+this.additionalProperties.put(name, value);
+}
+
+}
+-----------------------------------mathworks.technical.assignment.model.Tests.java-----------------------------------
+
+package mathworks.technical.assignment.model;
+
+import java.util.HashMap;
+import java.util.Map;
+import javax.annotation.Generated;
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({
+"1M_pop",
+"total"
+})
+@Generated("jsonschema2pojo")
+public class Tests {
+
+@JsonProperty("1M_pop")
+private String _1MPop;
+@JsonProperty("total")
+private Integer total;
+@JsonIgnore
+private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+
+@JsonProperty("1M_pop")
+public String get1MPop() {
+return _1MPop;
+}
+
+@JsonProperty("1M_pop")
+public void set1MPop(String _1MPop) {
+this._1MPop = _1MPop;
+}
+
+@JsonProperty("total")
+public Integer getTotal() {
+return total;
+}
+
+@JsonProperty("total")
+public void setTotal(Integer total) {
+this.total = total;
+}
+
+@JsonAnyGetter
+public Map<String, Object> getAdditionalProperties() {
+return this.additionalProperties;
+}
+
+@JsonAnySetter
+public void setAdditionalProperty(String name, Object value) {
+this.additionalProperties.put(name, value);
+}
+
+}

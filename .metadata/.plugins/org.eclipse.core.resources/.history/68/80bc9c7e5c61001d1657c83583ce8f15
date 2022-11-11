@@ -1,0 +1,31 @@
+package mathworks.technical.assignment.tests;
+
+
+import java.util.List;
+
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+import static org.testng.Assert.assertNotNull;
+import mathworks.technical.assignment.helpers.Covid19Helper;
+import mathworks.technical.assignment.model.StatisticsObject;
+import mathworks.technical.assignment.model.StatisticsObject;
+
+public class Test_Scenario1 {
+	
+	private Covid19Helper covid19Helper;
+	
+	
+	@BeforeClass
+	public void init() {
+		covid19Helper = new Covid19Helper();
+		
+	}
+	
+	@Test
+	public void testGetValidateCurrentStatistics() {
+		List<StatisticsObject> statisticsList = covid19Helper.getStatistics();
+		assertNotNull(statisticsList,"Statistics list is not empty");
+		
+		
+	}
+}

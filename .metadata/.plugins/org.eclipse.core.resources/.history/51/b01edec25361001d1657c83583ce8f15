@@ -1,0 +1,110 @@
+package mathworks.technical.assignment.model;
+
+import java.util.HashMap;
+import java.util.Map;
+import javax.annotation.Generated;
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({
+"cases",
+"country",
+"day",
+"deaths",
+"tests",
+"time"
+})
+@Generated("jsonschema2pojo")
+public class Properties__1 {
+
+@JsonProperty("cases")
+private Cases cases;
+@JsonProperty("country")
+private Country country;
+@JsonProperty("day")
+private Day day;
+@JsonProperty("deaths")
+private Deaths deaths;
+@JsonProperty("tests")
+private Tests tests;
+@JsonProperty("time")
+private Time time;
+@JsonIgnore
+private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+
+@JsonProperty("cases")
+public Cases getCases() {
+return cases;
+}
+
+@JsonProperty("cases")
+public void setCases(Cases cases) {
+this.cases = cases;
+}
+
+@JsonProperty("country")
+public Country getCountry() {
+return country;
+}
+
+@JsonProperty("country")
+public void setCountry(Country country) {
+this.country = country;
+}
+
+@JsonProperty("day")
+public Day getDay() {
+return day;
+}
+
+@JsonProperty("day")
+public void setDay(Day day) {
+this.day = day;
+}
+
+@JsonProperty("deaths")
+public Deaths getDeaths() {
+return deaths;
+}
+
+@JsonProperty("deaths")
+public void setDeaths(Deaths deaths) {
+this.deaths = deaths;
+}
+
+@JsonProperty("tests")
+public Tests getTests() {
+return tests;
+}
+
+@JsonProperty("tests")
+public void setTests(Tests tests) {
+this.tests = tests;
+}
+
+@JsonProperty("time")
+public Time getTime() {
+return time;
+}
+
+@JsonProperty("time")
+public void setTime(Time time) {
+this.time = time;
+}
+
+@JsonAnyGetter
+public Map<String, Object> getAdditionalProperties() {
+return this.additionalProperties;
+}
+
+@JsonAnySetter
+public void setAdditionalProperty(String name, Object value) {
+this.additionalProperties.put(name, value);
+}
+
+}
