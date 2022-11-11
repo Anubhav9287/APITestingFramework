@@ -1,0 +1,51 @@
+package mathworks.technical.assignment.helpers;
+
+import static org.testng.Assert.assertEquals;
+
+import java.lang.reflect.Type;
+
+import org.apache.http.HttpStatus;
+
+import com.fasterxml.jackson.core.type.TypeReference;
+
+import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
+import io.restassured.response.Response;
+import mathworks.technical.assignment.constants.EndPoints;
+import mathworks.technical.assignment.model.SentimentObject;
+import mathworks.technical.assignment.model.StatisticsObject;
+import mathworks.technical.assignment.utils.ConfigManager;
+
+public class SentimentHelper {
+	private static final String BASE_URL_T2  = ConfigManager.getInstance().getString("base_url_t2");
+	
+	public SentimentHelper() {
+		RestAssured.baseURI = BASE_URL_T2;
+	}
+//	RestAssured.baseURI ="https://demoqa.com/Account/v1"; 
+//    RequestSpecification request = RestAssured.given(); 
+//    JSONObject requestParams = new JSONObject();
+//    requestParams.put("userName", "test_rest");
+//    requestParams.put("password", "Testrest@123"); 
+//    request.body(requestParams.toJSONString());
+//    Response response = request.put("/User"); 
+//    ResponseBody body = response.getBody();
+//    System.out.println(response.getStatusLine());
+//    System.out.println(body.asString());
+	
+	public Response getSentiments(){
+		
+		SentimentObject sentiment = new SentimentObject();
+		
+		Response response = RestAssured.given()
+				.contentType(ContentType.JSON)
+				.when()
+				.body(sentiment)
+				.post(EndPoints.GET_SENTIMENTS)
+				.andReturn();
+		
+		return null;
+	}
+	
+
+}

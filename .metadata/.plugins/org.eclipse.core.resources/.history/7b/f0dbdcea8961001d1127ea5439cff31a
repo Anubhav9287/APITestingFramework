@@ -1,0 +1,10 @@
+package mathworks.technical.assignment.helpers;
+
+import mathworks.technical.assignment.utils.ConfigManager;
+
+public class SentimentHelper {
+	private static final String BASE_URL_T2  = ConfigManager.getInstance().getString("base_url_t2");
+	
+	
+
+}

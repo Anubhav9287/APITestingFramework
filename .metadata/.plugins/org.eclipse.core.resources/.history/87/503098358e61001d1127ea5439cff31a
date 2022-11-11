@@ -1,0 +1,26 @@
+package mathworks.technical.assignment.tests;
+
+import static org.testng.Assert.assertNotNull;
+
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+import mathworks.technical.assignment.helpers.SentimentHelper;
+
+public class Test_Scenario2 {
+	
+	private SentimentHelper sentimentHelper;
+	
+	@BeforeClass
+	public void init() {
+		sentimentHelper = new SentimentHelper();
+	}
+	
+	@Test
+	public void testPostSentiment() {
+		String id = sentimentHelper.getSentiments().jsonPath().getString("id");
+		System.out.println("ID: "+id);
+		assertNotNull(id,"person id is not null");
+	}
+
+}

@@ -1,29 +1,26 @@
 package mathworks.technical.assignment.tests;
 
+import org.junit.Assert;
+import org.junit.BeforeClass;
+import org.junit.Test;
 
-import java.util.List;
-
-import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
 
 import mathworks.technical.assignment.helpers.Covid19Helper;
 import mathworks.technical.assignment.model.StatisticsObject;
 
 public class Test_Scenario1 {
 	
-	private Covid19Helper covid19Helper;
-	
+	private static Covid19Helper covid19Helper;
 	
 	@BeforeClass
-	public void init() {
+	public static void init() {
 		covid19Helper = new Covid19Helper();
 	}
-	
 	
 	/*
 	 * This test will check if the result of API is greater than 0
 	 */
+	
 	@Test
 	public void testValidateStatisticsResult() {
 		StatisticsObject statistics = covid19Helper.getStatistics();

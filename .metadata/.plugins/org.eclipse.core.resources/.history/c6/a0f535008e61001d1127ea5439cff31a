@@ -1,0 +1,22 @@
+package mathworks.technical.assignment.tests;
+
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+import mathworks.technical.assignment.helpers.SentimentHelper;
+
+public class Test_Scenario2 {
+	
+	private SentimentHelper sentimentHelper;
+	
+	@BeforeClass
+	public void init() {
+		sentimentHelper = new SentimentHelper();
+	}
+	
+	@Test
+	public void testPostSentiment() {
+		
+	}
+
+}

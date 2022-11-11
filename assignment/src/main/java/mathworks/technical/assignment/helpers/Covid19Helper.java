@@ -1,18 +1,12 @@
 package mathworks.technical.assignment.helpers;
 
-
-import static org.testng.Assert.assertEquals;
-
 import java.lang.reflect.Type;
-import java.util.List;
-
 import org.apache.http.HttpStatus;
-import org.apache.http.util.Asserts;
+import org.junit.Assert;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 
 import io.restassured.RestAssured;
-import io.restassured.common.mapper.TypeRef;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import mathworks.technical.assignment.constants.EndPoints;
@@ -50,7 +44,7 @@ public class Covid19Helper {
 		
 		Type type = new TypeReference<StatisticsObject>(){}.getType();
 		//Assert the status code
-		assertEquals(response.getStatusCode(),HttpStatus.SC_OK,"OK");
+		Assert.assertEquals(response.getStatusCode(),HttpStatus.SC_OK);
 		
 		StatisticsObject statistics = response.as(type);
 //		System.out.print("-----------------------------------------");

@@ -1,0 +1,45 @@
+package mathworks.technical.assignment.tests;
+
+import static org.testng.Assert.assertNotNull;
+
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+
+import com.tngtech.java.junit.dataprovider.DataProvider;
+import com.tngtech.java.junit.dataprovider.DataProviderRunner;
+import com.tngtech.java.junit.dataprovider.UseDataProvider;
+
+import mathworks.technical.assignment.helpers.SentimentHelper;
+
+@RunWith(DataProviderRunner.class)
+public class Test_Scenario2 {
+	
+	private static SentimentHelper sentimentHelper;
+	
+	@BeforeClass
+	public static void init() {
+		sentimentHelper = new SentimentHelper();
+	}
+	
+	@DataProvider
+    public static Object[][] sentimentAnalysis() {
+        return new Object[][]{
+                {1, "en", "I am a programmer"},
+                {2, "en", "Hello I love the service"},
+                {3, "en", "failure is not fatal"},
+                {4, "en", "Lead from the heart, not the head"},
+                {5, "en", "You cannot protect yourself from sadness without protecting yourself from happiness"}
+        };
+    }
+	
+	@Test
+	@UseDataProvider("sentimentAnalysis")
+	public void testPostSentiment(int id, String language, String text) {
+		
+		String r_id = sentimentHelper.getSentiments(id,language,text).jsonPath().getString("id");
+		System.out.println("ID: "+id);
+		assertNotNull(id,"person id is not null");
+	}
+	
+}

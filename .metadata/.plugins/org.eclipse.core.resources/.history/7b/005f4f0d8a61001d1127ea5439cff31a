@@ -1,0 +1,8 @@
+base_url_t1 = https://covid-193.p.rapidapi.com
+t1_api_key_name = X-RapidAPI-Key
+t1_api_key = 6ede4af5f8msh70971dcb7dda0f8p13856ajsn4bf5629002dd
+t1_api_host_name = X-RapidAPI-Host
+t1_api_host_value = covid-193.p.rapidapi.com
+#Query Parameter
+t1_query = country
+t1_country_name = USA
